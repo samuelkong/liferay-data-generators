@@ -1,10 +1,10 @@
-int numberToAdd = 10;
+int sitesToAdd = 10;
 
-String namePrefix = "Site ";
-String namePostfix = "";
+String siteNamePrefix = "Site ";
+String siteNamePostfix = "";
 
-String friendlyUrlPrefix = "/site-";
-String friendlyUrlPostfix = "";
+String siteFriendlyUrlPrefix = "/site-";
+String siteFriendlyUrlPostfix = "";
 
 //
 // End Configuration
@@ -17,9 +17,9 @@ import com.liferay.portal.kernel.util.PortalUtil;
 
 userId = PortalUtil.getUserId(actionRequest);
 
-for (int i = 1; i <= numberToAdd; i++) {
-	String name = namePrefix + i + namePostfix;
-	String friendlyUrl = friendlyUrlPrefix + i + friendlyUrlPostfix;
+for (int i = 1; i <= sitesToAdd; i++) {
+	String name = siteNamePrefix + i + siteNamePostfix;
+	String friendlyUrl = siteFriendlyUrlPrefix + i + siteFriendlyUrlPostfix;
 
 	GroupLocalServiceUtil.addGroup(
 		userId, 0, Group.class.getName(), 0,
